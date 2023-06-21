@@ -1,4 +1,4 @@
 # Catatan-Keuangan
-## Kelompok 1
+## Kelompok 3
 ### 105220004 - Vionna Febryany
 ### 105220035 - Muhammad Alviansyah
