@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:gravity="center"
+    android:clickable="true"
+    android:background="?selectableItemBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5">
+        <TextView
+            android:id="@+id/kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hiburan"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spotify"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20/06/2023"
+            android:textSize="10sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.5">
+        <TextView
+            android:id="@+id/jumlah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="textEnd"
+            android:text="- Rp 30.000" />
+    </LinearLayout>
+</LinearLayout>

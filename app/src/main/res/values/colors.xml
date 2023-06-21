@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B14F</color>
+    <color name="black">#000000</color>
+    <color name="grey">#b3b3b3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="income">#00FF00</color>
+    <color name="outcome">#FF0000</color>
+</resources>

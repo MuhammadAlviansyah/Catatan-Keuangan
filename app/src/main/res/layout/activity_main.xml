@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageButton
+                android:id="@+id/accountBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_account"
+                android:backgroundTint="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Hello, Alviansyah"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/white_background"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:id="@+id/balance_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/balance_container">
+                <LinearLayout
+                    android:id="@+id/balance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Balance"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 350.000"
+                        android:textSize="32sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.5">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Income" />
+                            <TextView
+                                android:id="@+id/income"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 500.000"
+                                android:textColor="@color/income"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="0.5">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Outcome"
+                                android:textAlignment="textEnd"/>
+                            <TextView
+                                android:id="@+id/outcome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rp 150.000"
+                                android:textColor="@color/outcome"
+                                android:textAlignment="textEnd"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recyclerview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/balance_container"
+                android:layout_alignParentStart="true"
+                android:text="History"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="16dp"
+                android:layout_below="@id/recyclerview_title" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_add_transaction"
+        app:borderWidth="0dp"
+        android:layout_gravity="bottom|end"
+        app:tint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/lyNotFound"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_list"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:text="Oops, there haven't been any transactions yet!"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
